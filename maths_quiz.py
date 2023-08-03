@@ -62,3 +62,7 @@ print("You chose {}".format(played_before))
 
 if played_before == "yes":
   instructions()
+print()
+print("Maths Quiz Continues")
+print()
+statement_generator("Let's get started", "^")

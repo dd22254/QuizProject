@@ -1,5 +1,6 @@
 
 
+
 # Functions go here...
 def yes_no(question):
     valid = False
@@ -20,23 +21,32 @@ def yes_no(question):
 
 def instructions():
   print()
-  statement_generator("How to Play", "#")
-  print()
   statement_generator("The rules of the game go here", "~")
   print()
-  print("In every rounds you'll get 10IQ (it reminds as your points)")
+  statement_generator("How to Play", "#")
   print()
-  print("From each round you will get a donkey, a zebra, a horse and if you're lucky you will get a unicor.")
-  print()
-  print("Here's the payout amounts...")
-  print()
-  print("Unicorn: $5.00, balance will increase by $4")
-  print("Horse: $0.50, balance will decrease by $0.50 ")
-  print("Zebra: $0.50, balance will decrease by $0.50")
-  print("Donkey: $0.00, balance will decrease by $1.00")
-  print()
-  print("Hint: Try to avoid the donkey and try to get the unicorn so your balance will increse")
   return ""
+
+# Functions go here...
+def num_check(question, low, high):
+  error = "Please enter an whole number between 1 and 10\n"
+
+  valid = False
+  while not valid:
+    try:
+      # ask the question
+      response = int(input(question))
+
+      # if the amount is too low / too high give
+      if low < response <= high:
+        return response
+
+      # output an error
+      else:
+        print(error)
+
+    except ValueError:
+      print(error)
 
 def statement_generator(statement, decoration):
 
@@ -54,11 +64,26 @@ def statement_generator(statement, decoration):
 # Main routine goes here
 statement_generator("Welcome to the Maths Quiz", "*")
 print()
+name = input("Hi what is your name? ")
+print()
+print("Hi nice to meet you {}".format(name))
 
 # Main Routine goes here...
+print()
 played_before = yes_no("Have you played any maths quiz before? ")
 print()
 print("You chose {}".format(played_before))
 
 if played_before == "yes":
   instructions()
+print()
+print("Maths Quiz Continues")
+print()
+statement_generator("Let's get started", "^")
+
+# Main routine goe here
+print()
+how_much = num_check("How much would you like to play with? ", 0, 10)
+print()
+print("You will be spending ${}".format(how_much))
+
