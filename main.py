@@ -1,1 +1,1 @@
-import times_table
+import times_quiz

@@ -17,17 +17,20 @@ print("Hi nice to meet you {}".format(name))
 
 times = int(input("Please enter the times table you want to get tested on:"))
 max_num = int(input("Enter the max number: "))
-score = 1
+STARTING_SCORE = 0
 
+score = STARTING_SCORE
 for i in range(1, max_num):
-
     answer = i * times
     guess = int(input("What is {} x {} = ".format(i, times)))
     prize_decoration = "?"
     if guess != answer:
-        statement_generator("Incorrect", "X")
+        print("Incorrect")
         score -= 1
 
     else:
-        statement_generator("Correct", "!")
+        print("Correct")
         score += 1
+
+print("Starting Score: {}".format(STARTING_SCORE))
+print("Final Score: {}".format(score))

@@ -107,7 +107,7 @@ while play_again == "":
   rounds_played += 1
   print()
   # Print round number
-  print("***** Round #{} *****".format(rounds_played))
+  print("******** Round #{} ********".format(rounds_played))
 
   chosen_num = random.randint(0, 100)
 
@@ -160,4 +160,4 @@ print("Final Balance: ${}".format(balance))
 print()
 played_before = yes_no("Have you enjoyed the game? ")
 print()
-statement_generator("Thank you for playing the Unicorn Game!", "+")
+statement_generator("Thank you for playing the Lucky Unicorn Game!", ":")

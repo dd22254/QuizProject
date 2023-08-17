@@ -21,7 +21,7 @@ def yes_no(question):
 
 def instructions():
   print()
-  statement_generator("The rules of the game go here", "~")
+  statement_generator("The rules of Maths Quiz go here", "~")
   print()
   statement_generator("How to Play", "#")
   print()
